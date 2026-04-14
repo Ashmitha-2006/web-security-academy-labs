@@ -157,6 +157,12 @@ The payload never reaches the server. The browser fetches the page normally, the
 
 ---
 
+## 🧠 Skills Demonstrated
+- DOM-based XSS exploitation
+- Source-to-sink analysis
+- Context-aware payload crafting
+- Client-side vulnerability analysis
+  
 ## Key Takeaways
 
 - **DOM XSS is entirely client-side** — the payload never hits the server, making it invisible to server-side defences.
