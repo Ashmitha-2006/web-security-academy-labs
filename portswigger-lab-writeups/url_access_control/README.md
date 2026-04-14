@@ -10,8 +10,10 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [Real-World Scenario](#real-world-scenario)
 - [Vulnerability Description](#vulnerability-description)
 - [Tools Used](#tools-used)
+- [Skills Demonstrated](#skills-demonstrated)
 - [Exploitation Steps](#exploitation-steps)
   - [Step 1 — Confirm Access Restriction on /admin](#step-1--confirm-access-restriction-on-admin)
   - [Step 2 — Probe for X-Original-URL Header Support](#step-2--probe-for-x-original-url-header-support)
@@ -34,13 +36,8 @@ This lab demonstrates how front-end access controls that rely solely on URL path
 
 ---
 
-## 🧠 Skills Demonstrated
-- Access control bypass techniques
-- HTTP header manipulation
-- Proxy vs backend analysis
-- Burp Suite request crafting
-- Vulnerability validation methodology
-
+## 🌍 Real-World Scenario
+In real-world applications, reverse proxies and load balancers often rely on internal headers like `X-Original-URL` to route requests. If these headers are not properly restricted, an attacker can manipulate them to bypass authentication controls and gain unauthorized access to sensitive endpoints such as admin panels, leading to account compromise or full system control.
   
 ## Vulnerability Description
 
