@@ -34,6 +34,14 @@ This lab demonstrates how front-end access controls that rely solely on URL path
 
 ---
 
+## 🧠 Skills Demonstrated
+- Access control bypass techniques
+- HTTP header manipulation
+- Proxy vs backend analysis
+- Burp Suite request crafting
+- Vulnerability validation methodology
+
+  
 ## Vulnerability Description
 
 | Attribute | Detail |
@@ -58,6 +66,13 @@ Because the front-end only inspects the raw request path and the back-end trusts
 - **Browser** – PortSwigger Web Security Academy lab environment
 
 ---
+## 🧠 Skills Demonstrated
+- Access control bypass techniques
+- HTTP header manipulation
+- Proxy vs backend analysis
+- Burp Suite request crafting
+- Vulnerability validation methodology
+
 
 ## Exploitation Steps
 
