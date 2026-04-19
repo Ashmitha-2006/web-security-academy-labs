@@ -39,7 +39,7 @@ A collection of professional writeups for completed PortSwigger Web Security Aca
 
 ## OWASP Top 10 Mapping
 
-| Lab | OWASP Top 10 (2021) |
+| Lab | OWASP Top 10 (2025) |
 |-----|---------------------|
 | URL-Based Access Control Bypass | A01 — Broken Access Control |
 | IDOR + Password Disclosure | A01 — Broken Access Control / A02 — Cryptographic Failures |
