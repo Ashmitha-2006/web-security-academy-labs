@@ -20,7 +20,7 @@ A collection of professional writeups for completed PortSwigger Web Security Aca
 
 ### 🔐 Access Control
 - **URL-Based Access Control Bypass** — Front-end proxy blocked `/admin` by URL path, but the back-end honoured the `X-Original-URL` header, allowing full bypass via header injection.
-- **IDOR + Password Disclosure** — User account data controlled by an unvalidated `id` parameter, with plaintext passwords exposed directly in the HTML response.
+- **IDOR + Password Disclosure** — User account data controlled by an invalidated `id` parameter, with plaintext passwords exposed directly in the HTML response.
 
 ### ⚡ Cross-Site Scripting (XSS)
 - **DOM XSS** — `document.write` sink fed by `location.search` with no sanitization; payload breaks out of `<select>` context to execute `alert(1)`.
