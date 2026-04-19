@@ -126,17 +126,6 @@ Browser executes <script> → alert(1) fires for EVERY visitor
 
 ---
 
-## Remediation
-
-| Recommendation | Description |
-|----------------|-------------|
-| **HTML-encode all stored content on output** | When rendering stored user input in HTML, encode `<` → `&lt;`, `>` → `&gt;`, `"` → `&quot;`, `'` → `&#x27;`. This is the primary fix. |
-| **Sanitize input server-side before storage** | Use a server-side HTML sanitization library (e.g. DOMPurify server-side, OWASP Java HTML Sanitizer) to strip dangerous tags before persisting to the database. |
-| **Implement Content Security Policy (CSP)** | A strict CSP (`script-src 'self'`) prevents inline `<script>` execution, significantly limiting impact of any residual XSS. |
-| **Use a modern templating engine with auto-escaping** | React, Angular, and Jinja2 (auto-escape mode) encode output by default, preventing this class of vulnerability at the framework level. |
-
----
-
 ## Key Takeaways
 
 - **Stored XSS is a persistent, multi-victim vulnerability.** A single malicious comment can compromise every future visitor to the page.
