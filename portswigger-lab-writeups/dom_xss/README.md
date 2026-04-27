@@ -28,7 +28,10 @@ This lab demonstrates a **DOM-based Cross-Site Scripting (XSS)** vulnerability i
 
 ![Lab Description](fig1_lab_description.png)
 
----
+🧠 Attacker’s Approach
+
+While analyzing the application, I observed that input from the URL was dynamically reflected on the page using JavaScript. Since this data was handled on the client side and not properly sanitized, it indicated a potential DOM-based XSS vulnerability.To confirm this, I attempted to inject a JavaScript payload into the URL parameter.
+
 
 ## Vulnerability Description
 
@@ -53,9 +56,8 @@ Because `location.search` flows directly into `document.write` without encoding,
 ---
 
 ## Tools Used
-
-- **Browser DevTools** – DOM inspection and source analysis
-- **Browser URL bar** – Payload delivery via crafted URL
+ Burp Suite (Proxy, Repeater)
+ Browser Developer Tools
 
 ---
 
@@ -156,6 +158,9 @@ The payload never reaches the server. The browser fetches the page normally, the
 | **Implement Content Security Policy (CSP)** | A strict CSP (`script-src 'self'`) blocks inline script execution, providing defence-in-depth even if XSS fires. |
 
 ---
+🌍 Real-World Scenario
+
+In real-world applications, DOM XSS vulnerabilities are often found in search functionalities, URL parameters, or dynamic content rendering.An attacker could craft a malicious link containing a payload and trick a victim into clicking it. Once opened, the script executes in the victim’s browser, potentially leading to session hijacking or data theft.
 
 ## 🧠 Skills Demonstrated
 - DOM-based XSS exploitation
@@ -170,6 +175,8 @@ The payload never reaches the server. The browser fetches the page normally, the
 - **Understanding injection context is critical.** The `<select>` context required a specific breakout sequence; a generic `<script>alert(1)</script>` alone would not work without the `">` prefix.
 - **`location.search` is a user-controlled source.** Any data from the URL query string, hash, or referrer flowing into a DOM sink without sanitization is exploitable.
 
----
+🏁 Conclusion
+
+This lab highlights how insecure handling of user input in client-side JavaScript can lead to serious security vulnerabilities. By exploiting this DOM-based XSS flaw, arbitrary JavaScript execution was achieved, demonstrating the importance of proper input validation and output encoding in web applications.
 
 *Writeup produced as part of PortSwigger Web Security Academy lab practice.*
